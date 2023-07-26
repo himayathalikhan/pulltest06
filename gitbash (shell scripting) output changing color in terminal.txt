@@ -1,0 +1,170 @@
+**To change color of output
+
+#!/bin/bash
+
+Set text color to red
+echo -e "\e[31mHello, world!\e[0m"
+# Set text color to red
+echo -e "\e[31mHello, world!\e[0m"
+# Set text color to green
+echo -e "\e[32mHello, world!\e[0m"
+# Set text color to yellow
+echo -e "\e[33mHello, world!\e[0m"
+# Set text color to blue
+echo -e "\e[34mHello, world!\e[0m"
+# Set text color to magenta
+echo -e "\e[35mHello, world!\e[0m"
+# Set text color to cyan
+echo -e "\e[36mHello, world!\e[0m"
+
+**User Define Variables
+
+#!/bin/bash
+# variable.sh.
+# user Define Variables.
+name="khaliq"
+age="20"
+echo ${name}
+echo "my name is ${name} and my age is ${age} "
+# echo 'my name is ${name} and my age is ${age}'
+work="programm"
+var="ing"
+echo "i am $working "
+echo "i am ${work} ing"
+echo "i am ${work}${var} "
+
+
+**
+
+#!/bin/bash
+# System define variables.
+# echo ${SHELL}
+echo ${HOME} # will show the home directory of current user
+echo ${OSTYPE} # type type of operating system.
+echo $PATH # A list of directories to be searched when executing commands. 
+echo ${$} # process id 
+echo ${PPID} # parent process id
+
+echo $PWD # present working directory
+echo $HOSTNAME # hostname of machine.
+echo $UID # user id
+# UID="5000"
+echo $UID 
+sleep 5
+echo ${SECONDS}
+
+
+(day-2)
+
+
+**
+#!/bin/bash
+read -p "please enter your name " name
+read -p "please enter your age " age
+read -p "please enter your password " -s password
+echo "Hello ${name}, and your age is ${age} and your password is ${password}"
+
+**
+#!/bin/bash
+CURRENT_WORKING_DIR=$(pwd)
+VARIABLE_SECOND_METHOD=`pwd`
+echo "${CURRENT_WORKING_DIR}"
+echo "${VARIABLE_SECOND_METHOD}"
+date_time=$(date +"%D-%T")
+echo "${date_time}"
+
+
+**
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  
+MyS3Bucket:  
+Type: "AWS::S3::Bucket"
+Properties:  
+BucketName: "email
+
+
+**
+#!/bin/bash
+string="my name is khaliq"
+echo "${string}"   # my name is Khaliq
+echo "${string^}"  # My name is Khaliq
+echo "${string^^}" # MY NAME IS KHALIQ
+string="My name is mohammed abdul khaliq"
+echo "${string}"  # My name is Abdul
+echo "${string,}" # my name is mohammed
+echo "${string,,}" # my name is khaliq
+echo "length of string variable is ${#string}"
+
+**
+#!/bin/bash
+a=5
+b=6
+echo "$((a+b))"
+echo "$((a-b))"
+echo "$((a*b))"
+echo "$((a/b))" # 5/6
+echo "$((a%b))"
+echo "$((2**3))" # 2*2*2
+((a++)) # a=a+1
+echo $a
+((a+=3)) # a=a+3
+echo $a
+
+**
+#!/bin/bash
+
+function install(){
+ echo "executing ${FUNCNAME} - start"
+ echo "installing ${1}"
+ echo "executing ${FUNCNAME} - end"
+}
+function configuration(){
+echo "config ${1}"
+echo "${FUNCNAME}"
+}
+
+function deploy() {
+ echo "deploying ${1}"
+ echo "${FUNCNAME}"
+}
+install "nginx"
+configuration "nginx"
+deploy "webapplication"
+
+**
+#!/bin/bash
+
+string="abckhaliqabcxyz"
+
+echo "${string:0}"
+echo "${string:1}"
+echo "${string:4}"
+echo "${string:0:3}"
+echo "${string:3:3}"
+echo "${string: -5}"
+
+echo "${string#a*c}"  # from starting, shortest match
+echo "${string##a*c}" # from starting, longest match
+
+echo ${string%b*z}  # from ending, shortest match
+echo "${string%%b*z}" # from ending, longest match
+
+string="abckhaliqvabcxyz"
+
+echo "${string/abc/xyz}"
+echo "${string//abc/xyz}"
+
+echo "${string/abc}"
+echo "${string//abc}"
+substring in shell script\
+
+**
+#!/bin/bash
+read -p "please enter a number " number
+initNumber=1
+while [[ ${initNumber} -le 10 ]]
+do
+ echo $((initNumber*number))
+    ((initNumber++))
+done

@@ -1,0 +1,7 @@
+aws ec2 run-instances --image-id ami-053b0d53c279acc90 --count 1 --instance-type t2.micro --key-name awscli --security-group-ids sg-0b1a16cd7ae71fe2b --subnet-id subnet-0542f7cff8f57465e
+
+AMI ID: ami-01107263728f3bef4
+
+SG ID: sg-0b1a16cd7ae71fe2b
+
+subnet ID: subnet-01dfce0497f46347a

@@ -1,0 +1,121 @@
+Git Push commands
+
+➜ mkdir git-demo
+➜ cd git-demo
+➜ pwd
+/home/mohammed/git-demo
+
+➜ mkdir first-repo
+➜ cd first-repo
+➜ pwd
+/home/mohammed/git-demo/first-repo
+
+➜ first-repo git init
+Initialized empty Git repository in /home/mohammed/git-demo/first-repo/.git/
+
+~/git-demo/first-repo(master)
+
+➜ touch khaliq
+➜ vi khaliq
+➜ git status
+
+On branch master
+No commits yet
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+khaliq
+nothing added to commit but untracked files present (use "git add" to track)
+
+➜ git add .
+➜ git status
+
+On branch master
+No commits yet
+
+Changes to be committed:
+(use "git rm --cached <file>..." to unstage)
+new file: khaliq
+
+➜ git commit -m "commitdone"
+
+[master (root-commit) 1e412f2] commit done
+1 file changed, 4 insertions(+)
+create mode 100644 khaliq
+
+➜ git log
+
+[3] + 5543 suspended git log
+
+➜ touch abdul
+➜ vi abdul
+➜ vi khaliq
+➜ git status
+
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: khaliq
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+abdul
+no changes added to commit (use "git add" and/or "git commit -a")
+
+➜ git add .
+➜ git commit -m "commit2done"
+
+[master b490342] commit2done
+2 files changed, 6 insertions(+)
+create mode 100644 abdul
+
+➜ git remote add origin https://github.com/wright2khaliq/sai-pawandemo.git
+➜ git remote -v
+
+origin https://github.com/wright2khaliq/sai-pawandemo.git (fetch)
+origin https://github.com/wright2khaliq/sai-pawandemo.git (push)
+
+➜ git push -u origin master
+
+Username for 'https://github.com': wright2khaliq
+Password for 'https://wright2khaliq@github.com':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 587 bytes | 587.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote: https://github.com/wright2khaliq/sai-pawandemo/pull/new/master
+remote:
+To https://github.com/wright2khaliq/sai-pawandemo.git
+ [new branch] master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+➜ first-repo git:(master)
+
+**** Now we will create folder manually, the same way mannaualy we will move it – home
+–git-demo-first -repo and will add the folder and will add it and commit it and push it
+
+➜  git add .
+➜  git commit -m "addfolder"
+
+[master 142e0ef] addfolder
+1 file changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 demo-repoo/jenkins.pdf
+
+➜ git push -u origin master
+
+Username for 'https://github.com': wright2khaliq
+Password for 'https://wright2khaliq@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.39 MiB | 1.86 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/wright2khaliq/sai-pawandemo.git
+b490342..142e0ef master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
